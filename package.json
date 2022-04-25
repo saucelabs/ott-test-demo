@@ -1,0 +1,27 @@
+{
+  "name": "webdriverio-appium-ott",
+  "version": "1.0.0",
+  "description": "Example Appium tests for tvOS and AndroidTV platforms.",
+  "scripts": {
+    "test.android.sauce.real.eu": "REGION=eu wdio tests/configs/wdio.android.sauce.real.conf.js",
+    "test.android.sauce.real.us": "wdio tests/configs/wdio.android.sauce.real.conf.js",
+    "test.ios.sauce.real.eu": "REGION=eu wdio tests/configs/wdio.ios.sauce.real.conf.js",
+    "test.ios.sauce.real.us": "wdio tests/configs/wdio.ios.sauce.real.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "@wdio/appium-service": "^6.10.11",
+    "@wdio/cli": "^6.10.11",
+    "@wdio/jasmine-framework": "^6.10.11",
+    "@wdio/local-runner": "^6.10.13",
+    "@wdio/sauce-service": "^6.10.14",
+    "@wdio/spec-reporter": "^6.10.6",
+    "@wdio/sync": "^6.10.11"
+  }
+}
