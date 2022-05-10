@@ -1,0 +1,25 @@
+apiVersion: v1alpha
+kind: xcuitest
+sauce:
+  region: eu-central-1
+  concurrency: 1
+  metadata:
+    tags:
+      - e2e
+      - release team
+      - other tag
+    build: Release $CI_COMMIT_SHORT_SHA
+
+xcuitest:
+  app: ./build/tvOSSampleApp.ipa
+  testApp: ./build/tvOSSampleAppUITests.ipa
+
+suites:
+  - name: "tvOSSampleApp @ Apple TV"
+    testOptions:
+      class: ["tvOSSampleAppUITests.tvOSSampleAppUITests"]
+    devices:
+      - name: "AppleTV_HD_real_tv"
+        # platformVersion: "14.6"
+        options:
+          private: true
